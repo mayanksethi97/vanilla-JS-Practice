@@ -1,0 +1,165 @@
+/* Here are example using css */
+
+body {
+  background-color: #e0e0e0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+* {
+  font-family: "Barlow", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+
+.custom-button {
+  background-color: grey;
+  color: black;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  border-radius: 7px;
+  box-shadow: 1px 1px 8px 0px;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+.custom-button:hover {
+  box-shadow: 1px 1px 13px 0px blue;
+}
+
+.heading {
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection {
+  height: 500px;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-y: scroll;
+}
+
+.collection::-webkit-scrollbar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-collection {
+  display: flex;
+  flex-direction: flex-start;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.input {
+  height: 40px;
+  border-radius: 5px;
+  color: black;
+  font-size:20px;
+}
+
+
+.collection-item{
+    background-color: #962c7d;
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px 0;
+    margin: 5px;
+    cursor:pointer;
+}
+
+.collection-item h2{
+  margin: 15px;
+  color:white;
+  
+}
+
+
+.todo-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction:row;
+}
+
+.todo-pane{
+  height: 500px;
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-y: scroll;
+}
+
+.todo-pane::-webkit-scrollbar {
+  display: none;
+}
