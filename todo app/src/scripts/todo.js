@@ -1,30 +1,33 @@
-import { collectionDetail } from "../components/collection-detail";
-const appContent = document.querySelector('#app-content');
 let draggableTodo = null;
-
+let ITEM_COUNT = 0;
 export const addCollectionItem = (item) => {
-    const itemObj = {
-        text: item,
-        id: new Date().getMilliseconds()
-    };
-    const collectionContainer = document.querySelector('#cl');
+    let itemId = ITEM_COUNT;
+    const pendingItems = document.querySelector('#pending-items');
+    const finsihedItems = document.querySelector('#finished-items');
     const newItem = document.createElement('div');
     newItem.className = 'collection-item';
-    newItem.innerHTML = `<h2>${item}</h2>`;
+    newItem.draggable = true;
     newItem.style.color = 'black';
-    collectionContainer.appendChild(newItem);
-    newItem.addEventListener('click', (e) => {
-        navigateToCollectionDetail(itemObj)
+    newItem.innerHTML = `<div class="todo-item-inner"><h2>${item}</h2><h3 id=${itemId}>X</h3></div>`;
+    newItem.style.color = 'black';
+    pendingItems.appendChild(newItem);
+    document.getElementById(itemId).addEventListener('click', () => {
+        try{
+            pendingItems.removeChild(newItem);
+        } 
+        catch(err){}
+        try{
+            finsihedItems.removeChild(newItem)
+        }
+        catch(err){}
     })
+    enableDragDrop(newItem);
+    ITEM_COUNT++;
 }
 
-const navigateToCollectionDetail = (item) => {
-    console.log(item);
-    appContent.innerHTML = collectionDetail;
+const enableDragDrop = (item) => {
 
-    const pitem = document.querySelector('#test123');
-    const pendingItems = document.querySelector('#pending-items');
-    const finishedItems = document.querySelector('#finished-items');
+    const pitem = item;
     const panes = document.querySelectorAll('.todo-pane');
 
     pitem.addEventListener('dragstart', onCardDrag);
@@ -32,15 +35,8 @@ const navigateToCollectionDetail = (item) => {
 
     panes.forEach((pane) => {
         pane.addEventListener('dragover', dragOver);
-    pane.addEventListener('drop', drop);
+        pane.addEventListener('drop', drop);
     })
-
-    
-    
-    // pendingItems.addEventListener('dragenter', dragEnter);
-    // pendingItems.addEventListener('dragleave', dragLeave);
-    // pendingItems.addEventListener('drop', drop);
-    // pendingItems.addEventListener('drop', drop);
 
 }
 
