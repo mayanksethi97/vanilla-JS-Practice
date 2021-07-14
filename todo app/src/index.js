@@ -6,3 +6,4 @@ const addCollection = document.getElementById('addcollection');
 addCollection.addEventListener('click', () => {
   openModal('myModal');
 })
+  

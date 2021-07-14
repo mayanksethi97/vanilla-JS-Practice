@@ -1,0 +1,14 @@
+.input-box{
+    display:flex;
+    width:100%;
+    justify-content:center
+}
+
+.input-box input[type="text"]{
+    margin:50px;
+    width:400px;
+    height: 50px;
+    border-radius: 30px;
+    outline: none;
+    font-size: 20px;
+}

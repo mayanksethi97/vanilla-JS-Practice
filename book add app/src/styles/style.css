@@ -1,0 +1,13 @@
+/* Here are example using css */
+@import url("./bootswatch-darkly.min.css");
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+* {
+  font-family: "Barlow", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
