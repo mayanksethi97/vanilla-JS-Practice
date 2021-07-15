@@ -1,0 +1,10 @@
+/* Here are example using css */
+@import url("./bootswatch-darkly.min.css");
+
+body, html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
